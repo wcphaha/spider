@@ -1,6 +1,6 @@
 ﻿const express = require("express")
-const fs = require("fs")
 const notifier = require('node-notifier')
+const fs = require("fs")
 const cheerio = require("cheerio")
 const Nightmare = require('nightmare'); // 自动化测试包，处理动态页面
 const nightmare = Nightmare({
@@ -14,8 +14,7 @@ main() //运行
 
 function main() {
     getPage()
-
-    setInterval(function () { //每30秒刷新一次
+    setInterval(function () { //每30秒刷新
         getPage()
     }, 30000);
 }
